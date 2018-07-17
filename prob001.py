@@ -11,7 +11,7 @@ def solve(input_data):
 
     :rtype: int
     '''
-    result = sum([i for i in range(input_data) if i%3==0 or i%5==0])
+    result = sum([i for i in range(input_data) if i % 3 == 0 or i % 5 == 0])
     return result
 
 
