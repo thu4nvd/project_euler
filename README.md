@@ -1,2 +1,4 @@
 # proj_euler
-solutions by me for problems in page: https://projecteuler.net
+Problems in :   https://projecteuler.net
+Solver:         thuanvd@outlook.com
+Periode:        From July 2018
