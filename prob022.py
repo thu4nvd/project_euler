@@ -14,13 +14,25 @@ https://projecteuler.net/problem=22
 '''
 
 
+def value_of(name):
+    import string
+    result = sum([string.ascii_uppercase.index(c) + 1 for c in name if c.isalpha()])
+    return result
+
+
 def solve():
-    import functools
-    product = functools.reduce(lambda x, y: x * y, range(1, 101))
-    return sum(int(c) for c in str(product))
+    import re
+    with open("p022_names.txt") as f:
+        names = f.read()
+    names = re.sub('"', '',names)
+    sorted_names = sorted(names.split(','))
+    worth = sum([(i + 1) * value_of(sorted_names[i]) for i in range(len(sorted_names))])
+
+    return worth
 
 
 def main():
+    print(value_of('COLIN'))
     print(solve())
 
 
